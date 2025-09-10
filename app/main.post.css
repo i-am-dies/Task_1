@@ -1371,6 +1371,10 @@ If needed, this could be resolved by:
         background-position: right 9px center;
     }
 
+    .input_date {
+        width: 100%;
+    }
+
     .input_textarea {
         min-height: 132px;
     }
