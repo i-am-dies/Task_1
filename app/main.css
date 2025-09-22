@@ -16,6 +16,10 @@
     --color-beige-100: #F9F7F4;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body, h1, h2, h3, p, a, li {
     transition: font-size 300ms ease;
 }
@@ -168,6 +172,7 @@ h3 {
 }
 
 .button {
+    background-color: transparent;
     border-style: none;
 
     text-decoration: none;
@@ -185,7 +190,7 @@ h3 {
             rgba(0 0 0 / 30%),
             transparent
         ),
-        url(image/background.png);
+        url(image/background.jpg);
     background-size: cover;
     background-position: center;
 
@@ -393,6 +398,7 @@ If needed, this could be resolved by:
     display: flex;
     flex-direction: column;
 
+    scroll-margin-top: 88px;
     gap: 100px;
 }
 
@@ -819,6 +825,16 @@ If needed, this could be resolved by:
     background-color: var(--color-orange-200);
 }
 
+.card__button:after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .card__footer-links {
     display: flex;
     flex-direction: row;
@@ -896,6 +912,8 @@ If needed, this could be resolved by:
 }
 
 .form__button {
+    box-sizing: border-box;
+
     padding: 15px 30px;
 
     background-color: var(--color-green-400);
@@ -940,6 +958,11 @@ If needed, this could be resolved by:
 
 .form__button_secondary:active {
     background-color: var(--color-gray-200);
+}
+
+label:has(.input_radio),
+label:has(.input_checkbox) {
+    cursor: pointer;
 }
 
 .label {
@@ -1013,6 +1036,8 @@ If needed, this could be resolved by:
     background-position: right 19px center;
 
     appearance: none;
+
+    cursor: pointer;
 }
 
 .input_select:invalid {
@@ -1032,6 +1057,8 @@ If needed, this could be resolved by:
 
     font-family: inherit;
     letter-spacing: -0.025em;
+
+    cursor: text;
 }
 
 .input_date-invalid {
@@ -1085,6 +1112,8 @@ If needed, this could be resolved by:
     padding: 0;
 
     appearance: none;
+
+    cursor: pointer;
 }
 
 .input_radio {
@@ -1297,6 +1326,10 @@ If needed, this could be resolved by:
     gap: 0.5em;
 }
 
+.footer__link:after {
+    left: calc(26px + 0.5em);
+}
+
 @media (max-width: 1919px) {
     .footer {
         gap: 290px;
@@ -1320,15 +1353,24 @@ If needed, this could be resolved by:
         gap: 0.25em;
     }
 
+    .footer__link:after {
+        left: calc(26px + 0.25em);
+    }
+
     .footer__link:last-child {  /* VK Fix */
         img {
             position: relative;
             left: -2px;
         }
 
-        a {
+        span {
             position: relative;
             left: -5px;
+        }
+
+        &:after {
+            left: calc(24px + 0.25em);
+            right: 5px;
         }
     }
 }

@@ -7,7 +7,7 @@
         <meta name="description" content="Идеальные путешествия существуют. Идейные соображения высшего порядка, а также рамки и место обучения кадров...">
         <meta name="keyword" content="путешествие, тур, идейные, соображения, высшего, порядка">
         <link rel="icon" href="app/image/favicon.svg" sizes="32x32">
-        <link rel="stylesheet" href="app/main.post.css">
+        <link rel="stylesheet" href="app/main.css">
         <script src="app/main.js"></script>
     </head>
     <body id="index">
@@ -56,10 +56,10 @@
                             <p class="p p_small">от 80 000 руб</p>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                         </footer>
                     </article>
                     <article class="card card_tour">
@@ -73,15 +73,15 @@
                             <p class="p p_small">от 80 000 руб</p>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                         </footer>
                     </article>
                     <article class="card card_tour">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/card_tour_photo-3.png" alt="Путешествие в горы">
+                            <img class="card__photo-image" src="app/image/card_tour_photo-3.jpg" alt="Путешествие в горы">
                         </div>
                         <header class="card__header">
                             <h3>Путешествие в горы</h3>
@@ -90,10 +90,10 @@
                             <p class="p p_small">от 80 000 руб</p>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                         </footer>
                     </article>
                     <article class="card card_tour">
@@ -107,10 +107,10 @@
                             <p class="p p_small">от 80 000 руб</p>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                         </footer>
                     </article>
                     <article class="card card_tour">
@@ -124,10 +124,10 @@
                             <p class="p p_small">от 80 000 руб</p>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                         </footer>
                     </article>
                     <article class="card card_tour">
@@ -141,10 +141,10 @@
                             <p class="p p_small">от 80 000 руб</p>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                         </footer>
                     </article>
                 </div>
@@ -153,7 +153,7 @@
                 <header class="section-header">
                     <h2 class="section-header__title">Собери свой тур</h2>
                     <p class="section-header__description p p_normal p_minor">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-                    <form class="form" action="#choose" method="post">
+                    <form class="form" action="#choose" onsubmit="event.preventDefault(); location = action;">
                         <label class="label">
                             <span class="p p_normal">Имя</span>
                             <input class="input input_text p p_normal" type="text" name="name" placeholder="Введите Ваше имя" autocomplete="name" required>
@@ -205,7 +205,7 @@
                             <input class="input input_checkbox" type="checkbox" name="isEULAAccepted" value="1" required>
                             <span class="p p_small">
                                 <span class="p p_minor">Нажимая кнопку, я принимаю условия</span>
-                                <a class="link" href="#">Лицензионного договора</a>
+                                <a class="link">Лицензионного договора</a>
                             </span>
                         </label>
                         <div class="form__row form__row_wide">
@@ -259,19 +259,19 @@
                     <li class="photos__row">
                         <img class="photo" src="app/image/travel_photo-1.png" alt="Фотография путешествия №1">
                         <img class="photo photo_notablet" src="app/image/travel_photo-2.png" alt="Фотография путешествия №2">
-                        <img class="photo photo_nomobile" src="app/image/travel_photo-3.png" alt="Фотография путешествия №3">
+                        <img class="photo photo_nomobile" src="app/image/travel_photo-3.jpg" alt="Фотография путешествия №3">
                         <img class="photo" src="app/image/travel_photo-4.png" alt="Фотография путешествия №4">
                     </li>
                     <li class="photos__row">
-                        <img class="photo" src="app/image/travel_photo-5.png" alt="Фотография путешествия №5">
+                        <img class="photo" src="app/image/travel_photo-5.jpg" alt="Фотография путешествия №5">
                         <img class="photo photo_nomobile" src="app/image/travel_photo-6.png" alt="Фотография путешествия №6">
                         <img class="photo photo_notablet" src="app/image/travel_photo-7.jpg" alt="Фотография путешествия №7">
-                        <img class="photo" src="app/image/travel_photo-8.png" alt="Фотография путешествия №8">
+                        <img class="photo" src="app/image/travel_photo-8.jpg" alt="Фотография путешествия №8">
                         <img class="photo" src="app/image/travel_photo-9.png" alt="Фотография путешествия №9">
                     </li>
                     <li class="photos__row">
-                        <img class="photo" src="app/image/travel_photo-10.png" alt="Фотография путешествия №10">
-                        <img class="photo" src="app/image/travel_photo-11.png" alt="Фотография путешествия №11">
+                        <img class="photo" src="app/image/travel_photo-10.jpg" alt="Фотография путешествия №10">
+                        <img class="photo" src="app/image/travel_photo-11.jpg" alt="Фотография путешествия №11">
                         <img class="photo photo_nomobile" src="app/image/travel_photo-12.png" alt="Фотография путешествия №12">
                         <img class="photo photo_notablet" src="app/image/travel_photo-13.png" alt="Фотография путешествия №13">
                     </li>
@@ -299,10 +299,10 @@
                             </ul>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                             <div class="card__footer-links p_normal">
                                 <a class="card__link link link_modern" href="https://telegram.org">telegram</a>
                                 <a class="card__link link link_modern" href="https://facebook.com">facebook</a>
@@ -321,10 +321,10 @@
                             <p class="p p_normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                             <div class="card__footer-links p_normal">
                                 <a class="card__link link link_modern" href="https://telegram.org">telegram</a>
                                 <a class="card__link link link_modern" href="https://facebook.com">facebook</a>
@@ -343,10 +343,10 @@
                             <p class="p p_normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
                         </div>
                         <footer class="card__footer">
-                            <a class="card__button" href="#">
+                            <button class="card__button button">
                                 <p class="p p_big">Подробнее</p>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
-                            </a>
+                            </button>
                             <div class="card__footer-links p_normal">
                                 <a class="card__link link link_modern" href="https://telegram.org">telegram</a>
                                 <a class="card__link link link_modern" href="https://facebook.com">facebook</a>
@@ -358,7 +358,7 @@
             </section>
             <section class="cta section section_small">
                 <div class="cta__photo">
-                    <img class="cta__photo-image" src="app/image/background.png" alt="Фон заголовка">
+                    <img class="cta__photo-image" src="app/image/background.jpg" alt="Фон заголовка">
                 </div>
                 <div class="section-header section-header_cta">
                     <h3 class="section-header__title">Пора в путешествие вместе с нами!</h3>
@@ -368,20 +368,20 @@
         </main>
         <footer class="footer">
             <p class="p p_normal p_minor">Наши социальные сети</p>
-            <ul class="footer__links p p_normal">
-                <li class="footer__link">
+            <div class="footer__links p p_normal">
+                <a class="footer__link link link_modern" href="https://telegram.org">
                     <img src="app/image/tg.svg" alt="telegram">
-                    <a class="link link_modern" href="https://telegram.org">telegram</a>
-                </li>
-                <li class="footer__link">
+                    <span>telegram</span>
+                </a>
+                <a class="footer__link link link_modern" href="https://facebook.com">
                     <img src="app/image/fb.svg" alt="facebook">
-                    <a class="link link_modern" href="https://facebook.com">facebook</a>
-                </li>
-                <li class="footer__link">
+                    <span>facebook</span>
+                </a>
+                <a class="footer__link link link_modern" href="https://vk.com">
                     <img src="app/image/vk.svg" alt="vkontakte">
-                    <a class="link link_modern" href="https://vk.com">vkontakte</a>
-                </li>
-            </ul>
+                    <span>vkontakte</span>
+                </a>
+            </div>
             <div itemscope itemtype="https://schema.org/Organization" style="display: none;">
                 <span itemprop="name">YourTour</span>
                 <span itemprop="telephone">+7 (999) 999-99-99</span>
