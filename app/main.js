@@ -1,4 +1,3 @@
-
 let header = {
     getNodes() {
         let classTitles = ['header', 'header__menu-holder', 'header__logo-image'],
@@ -18,6 +17,13 @@ let header = {
                 node.classList[methodTitle](classTitle+'_fixed');
             }
         }
+    },
+    init() {
+        let headerNodes = this.getNodes();
+
+        onscroll = () => this.updateStickyness(headerNodes);
+
+        this.updateStickyness(headerNodes);
     }
 }
 
@@ -25,40 +31,67 @@ let phone = {
     getNodes() {
         return document.getElementsByClassName('input_tel');
     },
-    updateValue(nodes) {
-        for(let node of nodes) {
-            let oldValue = node.value,
-                newValue = '';
+    format(string) {
+        let result = '+7(';
 
-            for(let i = 0; i < oldValue.length; i++) {
-                let c = oldValue[i];
+        string = string.replace(/^.*\(|^\+7/, '')  // Clear prefix
+                       .replace(/\D/g, '')         // Filter digits
+                       .substring(0, 10);          // Remove trail
 
-                /*
-                JS RegExp does not support partial pattern match.
-                It must be either hardcoded sequence of optional patterns, e.g.
-                /\+|\+[78]|\+[78]\(.../ or just the plain JS mask, as shown below.
-                */
-                switch(i) {
-                    case 0:  if(c == '+')             newValue += c; break;
-                    case 1:  if(c == 7 || c == 8)     newValue += c; break;
-                    case 2:  if(c == '(')             newValue += c; break;
-                    case 3:
-                    case 4:
-                    case 5:  if(Number.isInteger(+c)) newValue += c; break;
-                    case 6:  if(c == ')')             newValue += c; break;
-                    case 7:
-                    case 8:
-                    case 9:  if(Number.isInteger(+c)) newValue += c; break;
-                    case 10: if(c == '-')             newValue += c; break;
-                    case 11:
-                    case 12: if(Number.isInteger(+c)) newValue += c; break;
-                    case 13: if(c == '-')             newValue += c; break;
-                    case 14:
-                    case 15: if(Number.isInteger(+c)) newValue += c; break;
-                }
-            }
+        for(let i = 0; i < string.length; i++) {
+            if(i === 3) result += ')';
+            if(i === 6) result += '-';
+            if(i === 8) result += '-';
 
-            node.value = newValue;
+            result += string[i];
+        }
+
+        return result;
+    },
+    updateValue(event) {
+        let node = event.target;
+
+        if(event.type === 'input') {
+            let formatted = this.format(node.value),
+                p = node.selectionStart;
+
+            node.value = formatted;
+
+            if(p < 3)                              p = 3;                 // After prefix
+            if(p > 3 && /\D/.test(formatted[p-1])) p++;                   // At digit and not at delimiter
+            if(p > formatted.length)               p = formatted.length;  // Clamp to end
+
+            node.setSelectionRange(p, p);
+        } else
+        if(event.type === 'paste') {
+            event.preventDefault();
+
+            let pasted = (event.clipboardData || window.clipboardData).getData('text'),
+                formatted = this.format(pasted);
+
+            node.value = formatted;
+            node.setSelectionRange(node.value.length, node.value.length);
+        }
+    },
+    updateFocus(event) {
+        let node = event.target;
+
+        if(event.type == 'focus' && node.value === '') {
+            node.value = '+7(';
+            node.setSelectionRange(3, 3);
+        } else
+        if(event.type == 'blur' && node.value === '+7(') {
+            node.value = '';
+        }
+    },
+    init() {
+        let phoneNodes = this.getNodes();
+
+        for(let node of phoneNodes) {
+            node.onfocus = (e) => this.updateFocus(e);
+            node.onblur  = (e) => this.updateFocus(e);
+            node.oninput = (e) => this.updateValue(e);
+            node.onpaste = (e) => this.updateValue(e);
         }
     }
 }
@@ -68,20 +101,52 @@ let date = {
         return parentNode.getElementsByClassName('input_date');
     },
     updateInvalid(nodes) {
-        let todayDate = new Date();
+        for(let node of nodes) {
+            let methodTitle = node.value == '' ? 'add' : 'remove';
 
-        todayDate.setHours(0, 0, 0, 0);
+            node.classList[methodTitle]('input_date-invalid');
+        }
+    },
+    setClamp(nodes) {  // Selector restrictions
+        let minDate = new Date(),
+            maxDate = new Date('9999-12-31T00:00:00');
+
+        minDate.setHours(0, 0, 0, 0);
+
+        let minDateString = minDate.toLocaleDateString('en-CA'),
+            maxDateString = maxDate.toLocaleDateString('en-CA');
 
         for(let node of nodes) {
-            let pickedDate = new Date(node.value);
-
-            if(node.value == '' || pickedDate < todayDate) {
-                node.classList.add('input_date-invalid');
-                node.value = '';
-            } else {
-                node.classList.remove('input_date-invalid');
-            }
+            node.min = minDateString;
+            node.max = maxDateString;
         }
+    },
+    clamp(node) {  // Manual input restrictions
+        let minDate = new Date(),
+            maxDate = new Date('9999-12-31T00:00:00'),
+            pickedDate = new Date(node.value);
+
+        minDate.setHours(0, 0, 0, 0);
+
+        if(isNaN(pickedDate)) {
+            node.value = '';
+        } else {
+            pickedDate.setHours(0, 0, 0, 0);
+
+            if(pickedDate < minDate) node.value = minDate.toLocaleDateString('en-CA');
+            if(pickedDate > maxDate) node.value = maxDate.toLocaleDateString('en-CA');
+        }
+    },
+    init() {
+        let dateNodes = this.getNodes();
+
+        for(let node of dateNodes) {
+            node.onchange = () => this.updateInvalid([node]);
+            node.onblur = () => this.clamp(node);
+        }
+
+        this.updateInvalid(dateNodes);
+        this.setClamp(dateNodes);
     }
 }
 
@@ -97,16 +162,12 @@ var form = {  // "var", so the object can be accessed from the "window"
     }
 }
 
+var exampleAction = () => {
+    alert('Пример действия по нажатию.');
+}
+
 onload = () => {
-    let headerNodes = header.getNodes(),
-        phoneNodes = phone.getNodes(),
-        dateNodes = date.getNodes();
-
-    onscroll = () => header.updateStickyness(headerNodes);
-    for(let node of phoneNodes) node.oninput = () => phone.updateValue([node]);
-    for(let node of dateNodes) node.onblur = () => date.updateInvalid([node]);
-
-    header.updateStickyness(headerNodes);
-    phone.updateValue(phoneNodes);
-    date.updateInvalid(dateNodes);
+    header.init();
+    phone.init();
+    date.init();
 }

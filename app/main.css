@@ -20,7 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body, h1, h2, h3, p, a, li {
+body, h1, h2, h3, p, a, button, li {
     transition: font-size 300ms ease;
 }
 
@@ -34,6 +34,10 @@ body {
 
     color: var(--color-black);
     font-family: Roboto, sans-serif;
+}
+
+button {
+    font: inherit;
 }
 
 h1 {
@@ -250,7 +254,7 @@ If needed, this could be resolved by:
 
     height: 88px;
 
-    gap: 9.125em;
+    gap: 9.5vw;
 
     transition: gap 300ms ease;
 }
@@ -273,7 +277,7 @@ If needed, this could be resolved by:
     max-width: 100vw;
     overflow: hidden;
 
-    gap: 2.5em;
+    gap: 2.6vw;
 
     transition: 300ms ease;
     transition-property: gap, max-width;
@@ -281,11 +285,11 @@ If needed, this could be resolved by:
 
 @media (max-width: 1919px) {
     .header__menu {
-        gap: 4.125em;
+        gap: 8vw;
     }
 
     .header__navigation {
-        gap: 1.5em;
+        gap: 3vw;
     }
 }
 
