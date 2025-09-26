@@ -1,6 +1,6 @@
 let header = {
     getNodes() {
-        let classTitles = ['header', 'header__menu-holder', 'header__logo-image'],
+        let classTitles = ['header', 'header__logo-image'],
             nodes = {}
 
         for(let classTitle of classTitles) {

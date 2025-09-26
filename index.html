@@ -12,27 +12,25 @@
     </head>
     <body id="index">
         <header class="header">
-            <div class="header__menu-holder">
-                <div class="header__menu p p_normal">
-                    <a class="header__logo" href="#index">
-                        <img class="header__logo-image" src="app/image/logo.svg" alt="YourTour">
-                    </a>
-                    <nav class="header__navigation">
-                        <a class="link link_modern" href="#choose">Туры</a>
-                        <a class="link link_modern" href="#create">Создать тур</a>
-                        <a class="link link_modern" href="#reviews">Отзывы</a>
-                        <a class="link link_modern" href="#stories">Истории</a>
-                    </nav>
-                    <a class="header__phone link link_modern" href="tel:+79999999999">+7 999 999 99 99</a>
-                </div>
-            </div>
-            <div class="header__welcome">
-                <h1 class="header__title">Идеальные путешествия существуют</h1>
-                <p class="header__description p p_normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-                <a class="button header__button p p_small" href="#choose">Найти тур</a>
+            <div class="header__menu p p_normal">
+                <a class="header__logo" href="#index">
+                    <img class="header__logo-image" src="app/image/logo.svg" alt="YourTour">
+                </a>
+                <nav class="header__navigation">
+                    <a class="link link_modern" href="#choose">Туры</a>
+                    <a class="link link_modern" href="#create">Создать тур</a>
+                    <a class="link link_modern" href="#reviews">Отзывы</a>
+                    <a class="link link_modern" href="#stories">Истории</a>
+                </nav>
+                <a class="header__phone link link_modern" href="tel:+79999999999">+7 999 999 99 99</a>
             </div>
         </header>
         <main class="main">
+            <section class="section section_welcome">
+                <h1 class="section__title">Идеальные путешествия существуют</h1>
+                <p class="section__description p p_normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
+                <a class="button section__button p p_small" href="#choose">Найти тур</a>
+            </section>
             <section class="section section_normal" id="choose">
                 <header class="section-header">
                     <h2 class="section-header__title">Выбери свой тур</h2>
@@ -57,7 +55,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                         </footer>
@@ -74,7 +72,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                         </footer>
@@ -91,7 +89,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                         </footer>
@@ -108,7 +106,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                         </footer>
@@ -125,7 +123,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                         </footer>
@@ -142,7 +140,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                         </footer>
@@ -257,17 +255,29 @@
                 </header>
                 <ul class="photos">
                     <li class="photos__row">
-                        <img class="photo" src="app/image/travel_photo-1.png" alt="Фотография путешествия №1">
+                        <picture>
+                            <source srcset="app/image/travel_photo-1-360.png" media="(max-width: 1023px)">
+                            <source srcset="app/image/travel_photo-1-1024.jpg" media="(max-width: 1919px)">
+                            <img class="photo" src="app/image/travel_photo-1-1920.jpg" alt="Фотография путешествия №1">
+                        </picture>
                         <img class="photo photo_notablet" src="app/image/travel_photo-2.png" alt="Фотография путешествия №2">
                         <img class="photo photo_nomobile" src="app/image/travel_photo-3.jpg" alt="Фотография путешествия №3">
-                        <img class="photo" src="app/image/travel_photo-4.png" alt="Фотография путешествия №4">
+                        <picture>
+                            <source srcset="app/image/travel_photo-4-360.png" media="(max-width: 1023px)">
+                            <source srcset="app/image/travel_photo-4-1024.jpg" media="(max-width: 1919px)">
+                            <img class="photo" src="app/image/travel_photo-4-1920.jpg" alt="Фотография путешествия №4">
+                        </picture>
                     </li>
                     <li class="photos__row">
                         <img class="photo" src="app/image/travel_photo-5.jpg" alt="Фотография путешествия №5">
                         <img class="photo photo_nomobile" src="app/image/travel_photo-6.png" alt="Фотография путешествия №6">
                         <img class="photo photo_notablet" src="app/image/travel_photo-7.jpg" alt="Фотография путешествия №7">
                         <img class="photo" src="app/image/travel_photo-8.jpg" alt="Фотография путешествия №8">
-                        <img class="photo" src="app/image/travel_photo-9.png" alt="Фотография путешествия №9">
+                        <picture>
+                            <source srcset="app/image/travel_photo-9-360.png" media="(max-width: 1023px)">
+                            <source srcset="app/image/travel_photo-9-1024.jpg" media="(max-width: 1919px)">
+                            <img class="photo" src="app/image/travel_photo-9-1920.jpg" alt="Фотография путешествия №9">
+                        </picture>
                     </li>
                     <li class="photos__row">
                         <img class="photo" src="app/image/travel_photo-10.jpg" alt="Фотография путешествия №10">
@@ -300,7 +310,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                             <div class="card__footer-links p_normal">
@@ -322,7 +332,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                             <div class="card__footer-links p_normal">
@@ -344,7 +354,7 @@
                         </div>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
-                                <p class="p p_big">Подробнее</p>
+                                <span class="p p_big">Подробнее</span>
                                 <img src="app/image/arrow.svg" alt="Стрелка">
                             </button>
                             <div class="card__footer-links p_normal">
@@ -357,9 +367,10 @@
                 </div>
             </section>
             <section class="cta section section_small">
-                <div class="cta__photo">
-                    <img class="cta__photo-image" src="app/image/background.jpg" alt="Фон заголовка">
-                </div>
+                <picture>
+                    <source srcset="app/image/cta-360.png" media="(max-width: 1023px)">
+                    <img class="cta__photo" src="app/image/cta-1920.jpg" alt="Фон заголовка">
+                </picture>
                 <div class="section-header section-header_cta">
                     <h3 class="section-header__title">Пора в путешествие вместе с нами!</h3>
                     <p class="section-header__description p p_normal p_minor">Напиши на почту и узнай подробности на <a class="link" href="mailto:yourtour@gmail.com">yourtour@gmail.com</a></p>
