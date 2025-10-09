@@ -1,0 +1,42 @@
+@use '../function' as *;
+
+.photo {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+    object-fit: cover;
+
+    border-radius: 50px;
+}
+
+@media (max-width: 1919px) {
+    .photo_notablet {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .photos {
+        gap: fluid(18, 30, 360, 1024);
+    }
+
+    .photos__row:first-child {
+        gap: fluid(18, 20, 360, 1024);
+    }
+
+    .photos__row {
+        height: fluid(110, 301, 360, 1024);
+
+        gap: fluid(10, 20, 360, 1024);
+    }
+
+    .photo {
+        border-radius: fluid(20, 50, 360, 1024);
+    }
+
+    .photo_notablet,
+    .photo_nomobile {
+        display: none;
+    }
+}

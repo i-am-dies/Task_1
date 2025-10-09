@@ -1,0 +1,94 @@
+@use '../color' as *;
+@use '../function' as *;
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-self: stretch;
+
+    padding: fluid(60, 70, 1024, 1920);
+    column-gap: fluid(20, 30, 1024, 1920);
+    row-gap: 33px;
+
+    background-color: $color-white;
+    border-radius: 50px;
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+
+        gap: 30px;
+    }
+
+    &__row_wide {
+        grid-column: 1 / -1;
+    }
+
+    &__button {
+        box-sizing: border-box;
+
+        padding: 15px 30px;
+
+        background-color: $color-green-400;
+        border-radius: 10px;
+
+        color: $color-white;
+
+        transition: background-color 300ms ease;
+    }
+
+    &__button_secondary {
+        background-color: $color-green-100;
+
+        color: $color-green-400;
+    }
+
+    &__button:active {
+        background-color: $color-green-200;
+    }
+
+    &__button_secondary:active {
+        background-color: $color-gray-200;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form {
+        &__button {
+            min-width: 235px;
+        }
+
+        &__button:hover {
+            background-color: $color-green-300;
+        }
+
+        &__button_secondary:hover {
+            background-color: $color-gray-100;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .form {
+        grid-template-columns: 1fr;
+
+        margin-top: -10px;
+        padding: fluid(20, 60, 360, 1024);
+        padding-bottom: fluid(40, 60, 360, 1024);
+        gap: fluid(30, 33, 360, 1024);
+
+        border-radius: fluid(30, 50, 360, 1024);
+
+        &__row_wide {
+            gap: 10px;
+        }
+
+        &__button {
+            width: 100%;
+
+            padding: 12px 20px;
+        }
+    }
+}

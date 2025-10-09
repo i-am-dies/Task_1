@@ -1,0 +1,52 @@
+@use '../function' as *;
+
+.cards {
+    display: grid;
+
+    &_tour,
+    &_review {
+        gap: fluid(18, 30, 1024, 1920);
+    }
+
+    &_tour {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &_review {
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 100%;
+
+        margin: 70px 0 0 0;
+        padding: 0;
+    }
+
+    &_story {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1919px) {
+    .cards_tour {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1023px) {
+    .cards {
+        &_tour,
+        &_review {
+            grid-template-columns: 1fr;
+        }
+
+        &_review {
+            margin: 30px 0 0 0;
+        }
+
+        &_story {
+            gap: fluid(20, 50, 360, 1024);
+        }
+    }
+}

@@ -5,16 +5,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="description" content="Идеальные путешествия существуют. Идейные соображения высшего порядка, а также рамки и место обучения кадров...">
-        <meta name="keyword" content="путешествие, тур, идейные, соображения, высшего, порядка">
-        <link rel="icon" href="app/image/favicon.svg" sizes="32x32">
-        <link rel="stylesheet" href="app/main.css">
-        <script src="app/main.js"></script>
+        <meta name="keywords" content="путешествие, тур, идейные, соображения, высшего, порядка">
+        <link rel="icon" href="app/public/icon/favicon.svg" sizes="32x32">
+        <link rel="stylesheet" href="app/style/main.css">
+        <script src="app/script/main.js"></script>
     </head>
     <body id="index">
         <header class="header">
             <div class="header__menu p p_normal">
                 <a class="header__logo" href="#index">
-                    <img class="header__logo-image" src="app/image/logo.svg" alt="YourTour">
+                    <img class="header__logo-image" src="app/public/icon/logo.svg" alt="YourTour">
                 </a>
                 <nav class="header__navigation">
                     <a class="link link_modern" href="#choose">Туры</a>
@@ -27,208 +27,167 @@
         </header>
         <main class="main">
             <section class="section section_welcome">
-                <h1 class="section__title">Идеальные путешествия существуют</h1>
+                <h1 class="h1 section__title">Идеальные путешествия существуют</h1>
                 <p class="section__description p p_normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
                 <a class="button section__button p p_small" href="#choose">Найти тур</a>
             </section>
             <section class="section section_normal" id="choose">
                 <header class="section-header">
-                    <h2 class="section-header__title">Выбери свой тур</h2>
-                    <ul class="tabs p p_big">
-                        <li class="tabs__tab tabs__tab_active">Популярные</li>
-                        <li class="tabs__tab">Авторские</li>
-                        <li class="tabs__tab">Походы</li>
-                        <li class="tabs__tab">Сплавы</li>
-                        <li class="tabs__tab">Велопрогулки</li>
+                    <h2 class="h2 section-header__title">Выбери свой тур</h2>
+                    <ul class="tabs">
+                        <li><button class="tabs__tab tabs__tab_active button p p_big" onclick="exampleAction();">Популярные</button></li>
+                        <li><button class="tabs__tab button p p_big" onclick="exampleAction();">Авторские</button></li>
+                        <li><button class="tabs__tab button p p_big" onclick="exampleAction();">Походы</button></li>
+                        <li><button class="tabs__tab button p p_big" onclick="exampleAction();">Сплавы</button></li>
+                        <li><button class="tabs__tab button p p_big" onclick="exampleAction();">Велопрогулки</button></li>
                     </ul>
                 </header>
                 <div class="cards cards_tour">
                     <article class="card card_tour">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/card_tour_photo-1.jpg" alt="Путешествие в горы">
+                            <img class="card__photo-image" src="app/public/image/card_tour_photo-1.jpg" alt="Путешествие в горы">
                         </div>
-                        <header class="card__header">
-                            <h3>Путешествие в горы</h3>
-                        </header>
-                        <div class="card__main">
-                            <p class="p p_small">от 80 000 руб</p>
-                        </div>
-                        <footer class="card__footer">
-                            <button class="card__button button" onclick="exampleAction();">
-                                <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
-                            </button>
-                        </footer>
+                        <h3 class="h3 card__header">Путешествие в горы</h3>
+                        <p class="card__main p p_small">от 80 000 руб</p>
+                        <button class="card__button button" onclick="exampleAction();">
+                            <span class="p p_big">Подробнее</span>
+                            <img src="app/public/icon/arrow.svg" alt="Стрелка">
+                        </button>
                     </article>
                     <article class="card card_tour">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/card_tour_photo-2.jpg" alt="Путешествие в горы">
+                            <img class="card__photo-image" src="app/public/image/card_tour_photo-2.jpg" alt="Путешествие в горы">
                         </div>
-                        <header class="card__header">
-                            <h3>Путешествие в горы</h3>
-                        </header>
-                        <div class="card__main">
-                            <p class="p p_small">от 80 000 руб</p>
-                        </div>
-                        <footer class="card__footer">
-                            <button class="card__button button" onclick="exampleAction();">
-                                <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
-                            </button>
-                        </footer>
+                        <h3 class="h3 card__header">Путешествие в горы</h3>
+                        <p class="card__main p p_small">от 80 000 руб</p>
+                        <button class="card__button button" onclick="exampleAction();">
+                            <span class="p p_big">Подробнее</span>
+                            <img src="app/public/icon/arrow.svg" alt="Стрелка">
+                        </button>
                     </article>
                     <article class="card card_tour">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/card_tour_photo-3.jpg" alt="Путешествие в горы">
+                            <img class="card__photo-image" src="app/public/image/card_tour_photo-3.jpg" alt="Путешествие в горы">
                         </div>
-                        <header class="card__header">
-                            <h3>Путешествие в горы</h3>
-                        </header>
-                        <div class="card__main">
-                            <p class="p p_small">от 80 000 руб</p>
-                        </div>
-                        <footer class="card__footer">
-                            <button class="card__button button" onclick="exampleAction();">
-                                <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
-                            </button>
-                        </footer>
+                        <h3 class="h3 card__header">Путешествие в горы</h3>
+                        <p class="card__main p p_small">от 80 000 руб</p>
+                        <button class="card__button button" onclick="exampleAction();">
+                            <span class="p p_big">Подробнее</span>
+                            <img src="app/public/icon/arrow.svg" alt="Стрелка">
+                        </button>
                     </article>
                     <article class="card card_tour">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/card_tour_photo-4.jpg" alt="Путешествие в горы">
+                            <img class="card__photo-image" src="app/public/image/card_tour_photo-4.jpg" alt="Путешествие в горы">
                         </div>
-                        <header class="card__header">
-                            <h3>Путешествие в горы</h3>
-                        </header>
-                        <div class="card__main">
-                            <p class="p p_small">от 80 000 руб</p>
-                        </div>
-                        <footer class="card__footer">
-                            <button class="card__button button" onclick="exampleAction();">
-                                <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
-                            </button>
-                        </footer>
+                        <h3 class="h3 card__header">Путешествие в горы</h3>
+                        <p class="card__main p p_small">от 80 000 руб</p>
+                        <button class="card__button button" onclick="exampleAction();">
+                            <span class="p p_big">Подробнее</span>
+                            <img src="app/public/icon/arrow.svg" alt="Стрелка">
+                        </button>
                     </article>
                     <article class="card card_tour">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/card_tour_photo-5.jpg" alt="Путешествие в горы">
+                            <img class="card__photo-image" src="app/public/image/card_tour_photo-5.jpg" alt="Путешествие в горы">
                         </div>
-                        <header class="card__header">
-                            <h3>Путешествие в горы</h3>
-                        </header>
-                        <div class="card__main">
-                            <p class="p p_small">от 80 000 руб</p>
-                        </div>
-                        <footer class="card__footer">
-                            <button class="card__button button" onclick="exampleAction();">
-                                <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
-                            </button>
-                        </footer>
+                        <h3 class="h3 card__header">Путешествие в горы</h3>
+                        <p class="card__main p p_small">от 80 000 руб</p>
+                        <button class="card__button button" onclick="exampleAction();">
+                            <span class="p p_big">Подробнее</span>
+                            <img src="app/public/icon/arrow.svg" alt="Стрелка">
+                        </button>
                     </article>
                     <article class="card card_tour">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/card_tour_photo-6.jpg" alt="Путешествие в горы">
+                            <img class="card__photo-image" src="app/public/image/card_tour_photo-6.jpg" alt="Путешествие в горы">
                         </div>
-                        <header class="card__header">
-                            <h3>Путешествие в горы</h3>
-                        </header>
-                        <div class="card__main">
-                            <p class="p p_small">от 80 000 руб</p>
-                        </div>
-                        <footer class="card__footer">
-                            <button class="card__button button" onclick="exampleAction();">
-                                <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
-                            </button>
-                        </footer>
+                        <h3 class="h3 card__header">Путешествие в горы</h3>
+                        <p class="card__main p p_small">от 80 000 руб</p>
+                        <button class="card__button button" onclick="exampleAction();">
+                            <span class="p p_big">Подробнее</span>
+                            <img src="app/public/icon/arrow.svg" alt="Стрелка">
+                        </button>
                     </article>
                 </div>
             </section>
             <section class="section section_normal" id="create">
                 <header class="section-header">
-                    <h2 class="section-header__title">Собери свой тур</h2>
+                    <h2 class="h2 section-header__title">Собери свой тур</h2>
                     <p class="section-header__description p p_normal p_minor">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-                    <form class="form" action="#choose" onsubmit="event.preventDefault(); location = action;">
-                        <label class="label">
-                            <span class="p p_normal">Имя</span>
-                            <input class="input input_text p p_normal" type="text" name="name" placeholder="Введите Ваше имя" autocomplete="name" required>
-                        </label>
-                        <label class="label">
-                            <span class="p p_normal">Направление</span>
-                            <select class="input input_select p p_normal" name="direction" required>
-                                <option value hidden disabled selected>Куда хотите ехать</option>
-                                <option value="1">Опция 1</option>
-                                <option value="2">Опция 2</option>
-                                <option value="3">Опция 3</option>
-                                <option value="4">Опция 4</option>
-                            </select>
-                        </label>
-                        <label class="label">
-                            <span class="p p_normal">Email</span>
-                            <input class="input input_email p p_normal" type="email" name="email" placeholder="example@mail.com" autocomplete="email" required>
-                        </label>
-                        <label class="label">
-                            <span class="p p_normal">Телефон</span>
-                            <input class="input input_tel p p_normal" type="tel" name="phone" placeholder="+7(___)___-__-__" autocomplete="tel" pattern="\+[78]\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-                        </label>
-                        <label class="label">
-                            <span class="p p_normal">Дата от</span>
-                            <input class="input input_date p p_normal" type="date" name="dateFrom">
-                        </label>
-                        <label class="label">
-                            <span class="p p_normal">Дата до</span>
-                            <input class="input input_date p p_normal" type="date" name="dateTo">
-                        </label>
-                        <label class="label label_wide">
-                            <span class="p p_normal">Комментарий</span>
-                            <textarea class="input input_textarea p p_normal" name="comment"></textarea>
-                        </label>
-                        <div class="label label_wide">
-                            <span class="p p_normal">Вам есть 18 лет?</span>
-                            <div class="form__row">
-                                <label class="label label_h">
-                                    <input class="input input_radio" type="radio" name="isMature" value="1">
-                                    <span class="p p_normal">Да</span>
-                                </label>
-                                <label class="label label_h">
-                                    <input class="input input_radio" type="radio" name="isMature" value="0">
-                                    <span class="p p_normal">Нет</span>
-                                </label>
-                            </div>
-                        </div>
-                        <label class="label label_h label_wide">
-                            <input class="input input_checkbox" type="checkbox" name="isEULAAccepted" value="1" required>
-                            <span class="p p_small">
-                                <span class="p p_minor">Нажимая кнопку, я принимаю условия</span>
-                                <a class="link">Лицензионного договора</a>
-                            </span>
-                        </label>
-                        <div class="form__row form__row_wide">
-                            <button class="button form__button p p_normal">Найти тур</button>
-                            <button class="button form__button form__button_secondary p p_normal" type="button" onclick="window.form.reset(form);">Сбросить</button>
-                        </div>
-                    </form>
                 </header>
+                <form class="form" action="#choose" onsubmit="event.preventDefault(); location = action;">
+                    <label class="label">
+                        <span class="p p_normal">Имя</span>
+                        <input class="input input_text p p_normal" type="text" name="name" placeholder="Введите Ваше имя" autocomplete="name" required>
+                    </label>
+                    <label class="label">
+                        <span class="p p_normal">Направление</span>
+                        <select class="input input_select p p_normal" name="direction" required>
+                            <option value hidden disabled selected>Куда хотите ехать</option>
+                            <option value="1">Опция 1</option>
+                            <option value="2">Опция 2</option>
+                            <option value="3">Опция 3</option>
+                            <option value="4">Опция 4</option>
+                        </select>
+                    </label>
+                    <label class="label">
+                        <span class="p p_normal">Email</span>
+                        <input class="input input_email p p_normal" type="email" name="email" placeholder="example@mail.com" autocomplete="email" required>
+                    </label>
+                    <label class="label">
+                        <span class="p p_normal">Телефон</span>
+                        <input class="input input_tel p p_normal" type="tel" name="phone" placeholder="+7(___)___-__-__" autocomplete="tel" pattern="\+[78]\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                    </label>
+                    <label class="label">
+                        <span class="p p_normal">Дата от</span>
+                        <input class="input input_date p p_normal" type="date" name="dateFrom">
+                    </label>
+                    <label class="label">
+                        <span class="p p_normal">Дата до</span>
+                        <input class="input input_date p p_normal" type="date" name="dateTo">
+                    </label>
+                    <label class="label label_wide">
+                        <span class="p p_normal">Комментарий</span>
+                        <textarea class="input input_textarea p p_normal" name="comment"></textarea>
+                    </label>
+                    <div class="label label_wide">
+                        <span class="p p_normal">Вам есть 18 лет?</span>
+                        <div class="form__row">
+                            <label class="label label_h">
+                                <input class="input input_radio" type="radio" name="isMature" value="1">
+                                <span class="p p_normal">Да</span>
+                            </label>
+                            <label class="label label_h">
+                                <input class="input input_radio" type="radio" name="isMature" value="0">
+                                <span class="p p_normal">Нет</span>
+                            </label>
+                        </div>
+                    </div>
+                    <label class="label label_h label_wide">
+                        <input class="input input_checkbox" type="checkbox" name="isEULAAccepted" value="1" required>
+                        <span class="p p_small">
+                            <span class="p p_minor">Нажимая кнопку, я принимаю условия</span>
+                            <a class="link" href="/">Лицензионного договора</a>
+                        </span>
+                    </label>
+                    <div class="form__row form__row_wide">
+                        <button class="button form__button p p_normal">Найти тур</button>
+                        <button class="button form__button form__button_secondary p p_normal" type="button" onclick="window.form.reset(form);">Сбросить</button>
+                    </div>
+                </form>
             </section>
             <section class="section section_normal" id="reviews">
                 <header class="section-header">
-                    <h2 class="section-header__title">Отзывы наших путешественников</h2>
+                    <h2 class="h2 section-header__title">Отзывы наших путешественников</h2>
                     <p class="section-header__description p p_normal p_minor">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
                     <ul class="cards cards_review">
                         <li class="card card_review">
-                            <div class="card__main">
-                                <p class="p p_big">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.</p>
-                            </div>
+                            <p class="p p_big card__main">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.</p>
                             <div class="card__author">
-                                <h3>Мария</h3>
-                                <p class="p p_small p_minor">
-                                    <span>Тур:</span>
-                                    <span>Вдали от дома</span>
-                                </p>
-                                <img class="card__author-avatar" src="app/image/review_photo-1.png" alt="Мария">
+                                <h3 class="h3">Мария</h3>
+                                <p class="p p_small p_minor">Тур: Вдали от дома</p>
+                                <img class="card__author-avatar" src="app/public/image/review_photo-1.png" alt="Мария">
                             </div>
                         </li>
                         <li class="card card_review">
@@ -237,12 +196,9 @@
                                 <p class="p p_big">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.</p>
                             </div>
                             <div class="card__author">
-                                <h3>Павел</h3>
-                                <p class="p p_small p_minor">
-                                    <span>Тур:</span>
-                                    <span>Путешествие в горы</span>
-                                </p>
-                                <img class="card__author-avatar" src="app/image/review_photo-2.png" alt="Павел">
+                                <h3 class="h3">Павел</h3>
+                                <p class="p p_small p_minor">Тур: Путешествие в горы</p>
+                                <img class="card__author-avatar" src="app/public/image/review_photo-2.png" alt="Павел">
                             </div>
                         </li>
                     </ul>
@@ -250,56 +206,54 @@
             </section>
             <section class="section section_big">
                 <header class="section-header">
-                    <h2 class="section-header__title">Фотографии путешествий</h2>
+                    <h2 class="h2 section-header__title">Фотографии путешествий</h2>
                     <p class="section-header__description p p_normal p_minor">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
                 </header>
                 <ul class="photos">
                     <li class="photos__row">
                         <picture>
-                            <source srcset="app/image/travel_photo-1-360.png" media="(max-width: 1023px)">
-                            <source srcset="app/image/travel_photo-1-1024.jpg" media="(max-width: 1919px)">
-                            <img class="photo" src="app/image/travel_photo-1-1920.jpg" alt="Фотография путешествия №1">
+                            <source srcset="app/public/image/travel_photo-1-360.png" media="(max-width: 1023px)">
+                            <source srcset="app/public/image/travel_photo-1-1024.jpg" media="(max-width: 1919px)">
+                            <img class="photo" src="app/public/image/travel_photo-1-1920.jpg" alt="Фотография путешествия №1">
                         </picture>
-                        <img class="photo photo_notablet" src="app/image/travel_photo-2.png" alt="Фотография путешествия №2">
-                        <img class="photo photo_nomobile" src="app/image/travel_photo-3.jpg" alt="Фотография путешествия №3">
+                        <img class="photo photo_notablet" src="app/public/image/travel_photo-2.png" alt="Фотография путешествия №2">
+                        <img class="photo photo_nomobile" src="app/public/image/travel_photo-3.jpg" alt="Фотография путешествия №3">
                         <picture>
-                            <source srcset="app/image/travel_photo-4-360.png" media="(max-width: 1023px)">
-                            <source srcset="app/image/travel_photo-4-1024.jpg" media="(max-width: 1919px)">
-                            <img class="photo" src="app/image/travel_photo-4-1920.jpg" alt="Фотография путешествия №4">
+                            <source srcset="app/public/image/travel_photo-4-360.png" media="(max-width: 1023px)">
+                            <source srcset="app/public/image/travel_photo-4-1024.jpg" media="(max-width: 1919px)">
+                            <img class="photo" src="app/public/image/travel_photo-4-1920.jpg" alt="Фотография путешествия №4">
                         </picture>
                     </li>
                     <li class="photos__row">
-                        <img class="photo" src="app/image/travel_photo-5.jpg" alt="Фотография путешествия №5">
-                        <img class="photo photo_nomobile" src="app/image/travel_photo-6.png" alt="Фотография путешествия №6">
-                        <img class="photo photo_notablet" src="app/image/travel_photo-7.jpg" alt="Фотография путешествия №7">
-                        <img class="photo" src="app/image/travel_photo-8.jpg" alt="Фотография путешествия №8">
+                        <img class="photo" src="app/public/image/travel_photo-5.jpg" alt="Фотография путешествия №5">
+                        <img class="photo photo_nomobile" src="app/public/image/travel_photo-6.png" alt="Фотография путешествия №6">
+                        <img class="photo photo_notablet" src="app/public/image/travel_photo-7.jpg" alt="Фотография путешествия №7">
+                        <img class="photo" src="app/public/image/travel_photo-8.jpg" alt="Фотография путешествия №8">
                         <picture>
-                            <source srcset="app/image/travel_photo-9-360.png" media="(max-width: 1023px)">
-                            <source srcset="app/image/travel_photo-9-1024.jpg" media="(max-width: 1919px)">
-                            <img class="photo" src="app/image/travel_photo-9-1920.jpg" alt="Фотография путешествия №9">
+                            <source srcset="app/public/image/travel_photo-9-360.png" media="(max-width: 1023px)">
+                            <source srcset="app/public/image/travel_photo-9-1024.jpg" media="(max-width: 1919px)">
+                            <img class="photo" src="app/public/image/travel_photo-9-1920.jpg" alt="Фотография путешествия №9">
                         </picture>
                     </li>
                     <li class="photos__row">
-                        <img class="photo" src="app/image/travel_photo-10.jpg" alt="Фотография путешествия №10">
-                        <img class="photo" src="app/image/travel_photo-11.jpg" alt="Фотография путешествия №11">
-                        <img class="photo photo_nomobile" src="app/image/travel_photo-12.png" alt="Фотография путешествия №12">
-                        <img class="photo photo_notablet" src="app/image/travel_photo-13.png" alt="Фотография путешествия №13">
+                        <img class="photo" src="app/public/image/travel_photo-10.jpg" alt="Фотография путешествия №10">
+                        <img class="photo" src="app/public/image/travel_photo-11.jpg" alt="Фотография путешествия №11">
+                        <img class="photo photo_nomobile" src="app/public/image/travel_photo-12.png" alt="Фотография путешествия №12">
+                        <img class="photo photo_notablet" src="app/public/image/travel_photo-13.png" alt="Фотография путешествия №13">
                     </li>
                 </ul>
             </section>
             <section class="section section_normal" id="stories">
                 <header class="section-header">
-                    <h2 class="section-header__title">Истории путешествий</h2>
+                    <h2 class="h2 section-header__title">Истории путешествий</h2>
                     <p class="section-header__description p p_normal p_minor">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
                 </header>
                 <div class="cards cards_story">
                     <article class="card card_story">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/story_photo-1.jpg" alt="Автостопом в Стамбул">
+                            <img class="card__photo-image" src="app/public/image/story_photo-1.jpg" alt="Автостопом в Стамбул">
                         </div>
-                        <header class="card__header">
-                            <h3>Автостопом в Стамбул</h3>
-                        </header>
+                        <h3 class="h3 card__header">Автостопом в Стамбул</h3>
                         <div class="card__main">
                             <p class="p p_normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
                             <ul class="card__list">
@@ -311,7 +265,7 @@
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
                                 <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
+                                <img src="app/public/icon/arrow.svg" alt="Стрелка">
                             </button>
                             <div class="card__footer-links p_normal">
                                 <a class="card__link link link_modern" href="https://telegram.org">telegram</a>
@@ -322,18 +276,14 @@
                     </article>
                     <article class="card card_story">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/story_photo-2.jpg" alt="Автостопом в Стамбул">
+                            <img class="card__photo-image" src="app/public/image/story_photo-2.jpg" alt="Автостопом в Стамбул">
                         </div>
-                        <header class="card__header">
-                            <h3>Автостопом в Стамбул</h3>
-                        </header>
-                        <div class="card__main">
-                            <p class="p p_normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
-                        </div>
+                        <h3 class="h3 card__header">Автостопом в Стамбул</h3>
+                        <p class="p p_normal card__main">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
                                 <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
+                                <img src="app/public/icon/arrow.svg" alt="Стрелка">
                             </button>
                             <div class="card__footer-links p_normal">
                                 <a class="card__link link link_modern" href="https://telegram.org">telegram</a>
@@ -344,18 +294,14 @@
                     </article>
                     <article class="card card_story">
                         <div class="card__photo">
-                            <img class="card__photo-image" src="app/image/story_photo-3.jpg" alt="Автостопом в Стамбул">
+                            <img class="card__photo-image" src="app/public/image/story_photo-3.jpg" alt="Автостопом в Стамбул">
                         </div>
-                        <header class="card__header">
-                            <h3>Автостопом в Стамбул</h3>
-                        </header>
-                        <div class="card__main">
-                            <p class="p p_normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
-                        </div>
+                        <h3 class="h3 card__header">Автостопом в Стамбул</h3>
+                        <p class="p p_normal card__main">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
                         <footer class="card__footer">
                             <button class="card__button button" onclick="exampleAction();">
                                 <span class="p p_big">Подробнее</span>
-                                <img src="app/image/arrow.svg" alt="Стрелка">
+                                <img src="app/public/icon/arrow.svg" alt="Стрелка">
                             </button>
                             <div class="card__footer-links p_normal">
                                 <a class="card__link link link_modern" href="https://telegram.org">telegram</a>
@@ -368,11 +314,11 @@
             </section>
             <section class="cta section section_small">
                 <picture>
-                    <source srcset="app/image/cta-360.png" media="(max-width: 1023px)">
-                    <img class="cta__photo" src="app/image/cta-1920.jpg" alt="Фон заголовка">
+                    <source srcset="app/public/image/cta-360.png" media="(max-width: 1023px)">
+                    <img class="cta__photo" src="app/public/image/cta-1920.jpg" alt="Фон заголовка">
                 </picture>
                 <div class="section-header section-header_cta">
-                    <h3 class="section-header__title">Пора в путешествие вместе с нами!</h3>
+                    <h3 class="h3 section-header__title">Пора в путешествие вместе с нами!</h3>
                     <p class="section-header__description p p_normal p_minor">Напиши на почту и узнай подробности на <a class="link" href="mailto:yourtour@gmail.com">yourtour@gmail.com</a></p>
                 </div>
             </section>
@@ -381,15 +327,15 @@
             <p class="p p_normal p_minor">Наши социальные сети</p>
             <div class="footer__links p p_normal">
                 <a class="footer__link link link_modern" href="https://telegram.org">
-                    <img src="app/image/tg.svg" alt="telegram">
+                    <img src="app/public/icon/tg.svg" alt="telegram">
                     <span>telegram</span>
                 </a>
                 <a class="footer__link link link_modern" href="https://facebook.com">
-                    <img src="app/image/fb.svg" alt="facebook">
+                    <img src="app/public/icon/fb.svg" alt="facebook">
                     <span>facebook</span>
                 </a>
                 <a class="footer__link link link_modern" href="https://vk.com">
-                    <img src="app/image/vk.svg" alt="vkontakte">
+                    <img src="app/public/icon/vk.svg" alt="vkontakte">
                     <span>vkontakte</span>
                 </a>
             </div>

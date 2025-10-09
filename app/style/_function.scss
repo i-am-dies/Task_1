@@ -1,0 +1,17 @@
+/*
+Linear formula for adaptive design:
+    X == From value
+    Y == To value
+    A == From min resolution width
+    B == To max resolution width
+
+Should be used like this:
+    .class {
+        property: clamp(Xpx, calc(Xpx + (Y - X) * ((100vw - Apx) / (B - A))), Ypx);
+            or
+        property: fluid(X, Y, A, B);
+    }
+*/
+@function fluid($min, $max, $min-vw, $max-vw) {
+    @return clamp(#{$min}px, calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw}))), #{$max}px);
+}

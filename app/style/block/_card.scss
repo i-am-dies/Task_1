@@ -1,0 +1,269 @@
+@use '../color' as *;
+@use '../function' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    border-radius: 50px;
+
+    transition: gap 300ms ease;
+
+    &_tour,
+    &_story {
+        color: $color-white;
+    }
+
+    &_tour {
+        height: 531px;
+
+        padding: 50px;
+        gap: 16px;
+    }
+
+    &_review {
+        padding: 40px;
+
+        background-color: $color-beige-200;
+    }
+
+    &_story {
+        height: 567px;
+
+        padding: 60px;
+        gap: 37px;
+    }
+
+    &__photo,
+    &__photo:after,
+    &__photo-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__photo {
+        z-index: -1;
+    }
+
+    &_tour &__photo:after {
+        content: '';
+
+        background: linear-gradient(360deg,
+            rgba($color-black-100, 0.4) 0%,
+            rgba($color-black-100, 0.06) 48.44%,
+            rgba($color-black-100, 0.5) 100%
+        );
+    }
+
+    &_story &__photo:after {
+        content: '';
+
+        background: linear-gradient(270deg,
+            rgba($color-black-100, 0) 0.01%,
+            rgba($color-black-100, 0.2) 100%
+        );
+    }
+
+    &_tour &__header {
+        padding-right: fluid(0, 70, 1024, 1920);
+    }
+
+    &__main {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 1.75em;
+
+        text-align: left;
+    }
+
+    &_story &__main {
+        padding-right: fluid(240, 480, 1024, 1920);
+    }
+
+    &__author {
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        grid-template-rows: 1fr min-content;
+        grid-template-areas: "a avatar"
+                            "b avatar";
+        align-items: end;
+
+        margin-top: 70px;
+        gap: 8px;
+
+        text-align: left;
+    }
+
+    &__author-avatar {
+        grid-area: avatar;
+
+        border-radius: 100%;
+    }
+
+    &__list {
+        margin: 0;
+        padding-left: 0.75em;
+
+        list-style: none;
+    }
+
+    &__list-item:before {
+        content: '•';
+
+        padding-right: 0.55em;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: row;
+        align-self: start;
+        align-items: center;
+
+        margin: -7px -20px;
+        padding: 7px 20px;
+        gap: 1.2em;
+
+        border-radius: 50px;
+
+        color: inherit;
+        text-decoration: none;
+
+        transition: background-color 300ms ease;
+    }
+
+    &__button:active {
+        background-color: $color-orange-200;
+    }
+
+    &__button:after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__footer-links {
+        display: flex;
+        flex-direction: row;
+
+        overflow: hidden;
+
+        gap: 1.8em;
+
+        opacity: 1;
+        visibility: visible;
+        transition: 300ms ease;
+        transition-property: opacity, visibility;
+    }
+
+    &__link {
+        transition: color 300ms ease;
+    }
+
+    &__link:active {
+        color: $color-orange-200;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        &__photo {
+            transition: transform 300ms ease;
+        }
+
+        &:hover &__photo {
+            transform: scale(1.2);
+        }
+
+        &:hover &__button:not(:active) {
+            background-color: $color-green-400;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .card {
+        border-radius: fluid(20, 50, 360, 1024);
+
+        &_tour {
+            height: fluid(318, 455, 360, 1024);
+
+            padding: fluid(25, 50, 360, 1024);
+            gap: 13px;
+        }
+
+        &_review {
+            padding: fluid(20, 40, 360, 1024);
+        }
+
+        &_story {
+            height: 455px;
+
+            padding: fluid(30, 60, 360, 1024);
+            gap: 22px;
+        }
+
+        &_tour &__header {
+            padding-right: 0;
+        }
+
+        &_story &__header {
+            padding-right: fluid(120, 240, 360, 1024);
+        }
+
+        &__main {
+            gap: 1.45em;
+        }
+
+        &_review &__main {
+            padding-right: fluid(10, 0, 360, 1024);
+        }
+
+        &_story &__main {
+            padding-right: fluid(0, 400, 360, 1024);
+        }
+
+        &__author {
+            margin-top: 40px;
+        }
+
+        &__list {
+            padding-left: 0.6em;
+        }
+
+        &__button {
+            margin: -3.5px -12.5px;
+            padding: 3.5px 12.5px;
+
+            border-radius: 25px;
+        }
+
+        &__footer-links {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

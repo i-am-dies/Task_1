@@ -1,0 +1,157 @@
+@use '../color' as *;
+@use '../function' as *;
+
+.section {
+    display: flex;
+    flex-direction: column;
+
+    scroll-margin-top: 88px;
+    gap: 100px;
+}
+
+.section_welcome {
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 742px;
+
+    padding-top: 88px;
+    gap: 50px;
+
+    background:
+        linear-gradient(to bottom,
+            rgba($color-black-100, 0.3),
+            transparent
+        ),
+        url(../public/image/background.jpg);
+    background-size: cover;
+    background-position: center;
+
+    color: $color-white;
+    text-align: center;
+
+    transition: height 300ms ease;
+}
+
+.section_small {
+    width: 771px;
+}
+
+.section_normal {
+    width: fluid(918, 1170, 1024, 1920);
+}
+
+.section_big {
+    width: fluid(984, 1860, 1024, 1920);
+}
+
+@media (max-width: 1023px) {
+    .section {
+        gap: 50px;
+    }
+
+    .section_small {
+        width: auto;
+    }
+
+    .section_normal {
+        width: fluid(318, 918, 360, 1024);
+    }
+
+    .section_big {
+        width: fluid(318, 984, 360, 1024);
+    }
+}
+
+.section__title {
+    max-width: 7.5em;
+}
+
+.section__description {
+    max-width: 30em;
+}
+
+@media (max-width: 1919px) {
+    .section_welcome {
+        height: 743px;
+    }
+
+    .section__description {
+        max-width: 20em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .section_welcome {
+        height: 400px;
+
+        gap: 40px;
+    }
+
+    .section__description {
+        max-width: 17.5em;
+    }
+}
+
+.section__button {
+    padding: 5px 20px;
+
+    background: $color-white;
+    border-radius: 10px;
+
+    color: $color-black;
+
+    transition: 300ms ease;
+    transition-property: background-color, color;
+}
+
+@media (min-width: 1024px) {
+    .section__button:hover {
+        background: $color-orange-200;
+
+        color: $color-white
+    }
+}
+
+.section__button:active {
+    background: $color-orange-100;
+
+    color: $color-black
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 30px;
+
+    text-align: center;
+}
+
+.section-header_cta {
+    gap: 20px;
+
+    text-align: left;
+}
+
+@media (max-width: 1023px) {
+    .section-header {
+        gap: 20px;
+    }
+
+    .section-header_cta {
+        max-width: 19em;
+
+        text-align: center;
+    }
+}
+
+.section-header__title {
+    max-width: 15em;
+}
+
+.section-header__description {
+    max-width: 20em;
+}

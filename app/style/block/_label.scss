@@ -1,0 +1,27 @@
+.label {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px 11px;
+
+    text-align: left;
+
+    &:has(.input_radio),
+    &:has(.input_checkbox) {
+        cursor: pointer;
+    }
+
+    &_h {
+        flex-direction: row;
+    }
+
+    &_wide {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1023px) {
+    .label {
+        column-gap: 10px;
+    }
+}

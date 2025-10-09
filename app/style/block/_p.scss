@@ -1,0 +1,49 @@
+@use '../color' as *;
+
+.p {
+    &_big {
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+
+    &_normal {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    &_small {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+    }
+
+    &_minor {
+        color: $color-gray-300;
+    }
+}
+
+@media (max-width: 1023px) {
+    .p {
+        &_big {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 23px;
+        }
+
+        &_normal {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 23px;
+        }
+
+        &_small {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: -0.01em;
+        }
+    }
+}

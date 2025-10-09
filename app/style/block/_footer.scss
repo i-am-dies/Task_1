@@ -1,0 +1,76 @@
+@use '../color' as *;
+@use '../function' as *;
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 88px;
+    overflow: hidden;
+
+    gap: fluid(290, 540, 1024, 1920);
+
+    background: $color-beige-200;
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+
+        margin: 0;
+        padding: 0;
+        gap: 1.25em;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 0.5em;
+    }
+
+    &__link:after {
+        left: calc(26px + 0.5em);
+    }
+}
+
+@media (max-width: 1023px) {
+    .footer {
+        flex-direction: column;
+
+        height: 98px;
+
+        gap: 7px;
+
+        &__links {
+            gap: 1em;
+        }
+
+        &__link {
+            gap: 0.25em;
+        }
+
+        &__link:after {
+            left: calc(26px + 0.25em);
+        }
+
+        &__link:last-child {  /* VK Fix */
+            img {
+                position: relative;
+                left: -2px;
+            }
+
+            span {
+                position: relative;
+                left: -5px;
+            }
+
+            &:after {
+                left: calc(24px + 0.25em);
+                right: 5px;
+            }
+        }
+    }
+}

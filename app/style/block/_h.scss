@@ -1,0 +1,41 @@
+.h1 {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 105px;
+    letter-spacing: 0.02em;
+}
+
+.h2 {
+    font-size: 59px;
+    font-weight: 700;
+    line-height: 73px;
+}
+
+.h3 {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 43px;
+}
+
+@media (max-width: 1023px) {
+    .h1 {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: 0.02em;
+    }
+
+    .h2 {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: 0.02em;
+    }
+
+    .h3 {
+        font-size: 23px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+    }
+}

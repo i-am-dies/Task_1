@@ -1,0 +1,32 @@
+@use 'color' as *;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body, .h1, .h2, .h3, .p, a, .button, li {
+	transition: 300ms ease;
+	transition-property: font-size, line-height;
+}
+
+body, .h1, .h2, .h3, .p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-width: 360px;
+
+	background-color: $color-beige-100;
+
+	color: $color-black;
+	font-family: Roboto, sans-serif;
+}
+
+source {
+	display: none;
+}
+
+picture {
+	display: contents;
+}

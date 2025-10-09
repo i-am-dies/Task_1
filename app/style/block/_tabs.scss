@@ -1,0 +1,59 @@
+@use '../color' as *;
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 5px 0 6px 0;
+    padding: 0;
+    gap: 31px;
+
+    list-style: none;
+
+    &__tab {
+        position: relative;
+    }
+
+    &__tab_active {
+        color: $color-orange-200;
+
+        pointer-events: none;
+    }
+
+    &__tab:after {
+        content: '';
+        display: block;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+
+        border-top: 2px solid;
+
+        transition: transform 300ms ease;
+        transform: scaleX(0);
+    }
+
+    &__tab:hover:after,
+    &__tab_active:after {
+        transform: scaleX(1);
+    }
+}
+
+@media (max-width: 1023px) {
+    .tabs {
+        margin: 10px 0 0 0;
+        gap: 10px;
+
+        &__tab:after {
+            bottom: 1px;
+        }
+
+        &__tab:hover:after {
+            transform: scaleX(0);
+        }
+    }
+}
