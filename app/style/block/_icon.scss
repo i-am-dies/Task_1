@@ -1,0 +1,39 @@
+.icon {
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &_logo {
+        width: 182px;
+        height: 32px;
+
+        background-image: url(../public/icon/logo.svg);
+    }
+
+    &_arrow {
+        width: 24px;
+        height: 26px;
+
+        background-image: url(../public/icon/arrow.svg);
+    }
+
+    &_tg {
+        width: 26px;
+        height: 26px;
+
+        background-image: url(../public/icon/tg.svg);
+    }
+
+    &_fb {
+        width: 26px;
+        height: 25px;
+
+        background-image: url(../public/icon/fb.svg);
+    }
+
+    &_vk {
+        width: 26px;
+        height: 26px;
+
+        background-image: url(../public/icon/vk.svg);
+    }
+}

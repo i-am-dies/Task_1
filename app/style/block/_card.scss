@@ -171,7 +171,11 @@
 
         overflow: hidden;
 
+        margin: 0;
+        padding: 0;
         gap: 1.8em;
+
+        list-style: none;
 
         opacity: 1;
         visibility: visible;
@@ -180,6 +184,8 @@
     }
 
     &__link {
+        display: block;
+
         transition: color 300ms ease;
     }
 

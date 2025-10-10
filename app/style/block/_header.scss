@@ -45,15 +45,15 @@
         width: fluid(910, 1170, 1024, 1920);
     }
 
-    &__logo-image {
+    &__logo-icon {
         display: block;
 
-        max-height: 32px;
+        max-width: 182px;
 
-        transition: max-height 300ms ease;
+        transition: max-width 300ms ease;
     }
 
-    &__logo-image_fixed {
+    &__logo-icon_fixed {
         filter: invert(1);
     }
 
@@ -79,8 +79,8 @@
 
 @media (max-width: 1023px) {
     .header {
-        &__logo-image {
-            max-height: 23px;
+        &__logo-icon {
+            max-width: 132px;
         }
 
         &__menu {

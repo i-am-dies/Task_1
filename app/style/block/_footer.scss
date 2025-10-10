@@ -21,6 +21,8 @@
         margin: 0;
         padding: 0;
         gap: 1.25em;
+
+        list-style: none;
     }
 
     &__link {
@@ -29,10 +31,10 @@
         align-items: center;
 
         gap: 0.5em;
-    }
 
-    &__link:after {
-        left: calc(26px + 0.5em);
+        &:after {
+            left: calc(26px + 0.5em);
+        }
     }
 }
 
@@ -50,19 +52,19 @@
 
         &__link {
             gap: 0.25em;
+
+            &:after {
+                left: calc(26px + 0.25em);
+            }
         }
 
-        &__link:after {
-            left: calc(26px + 0.25em);
-        }
-
-        &__link:last-child {  /* VK Fix */
-            img {
+        &__links li:last-child &__link {  /* VK Fix */
+            & span:first-child {
                 position: relative;
                 left: -2px;
             }
 
-            span {
+            & span:last-child {
                 position: relative;
                 left: -5px;
             }
