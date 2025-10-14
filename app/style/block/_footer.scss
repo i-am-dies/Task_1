@@ -6,22 +6,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     height: 88px;
     overflow: hidden;
-
     gap: fluid(290, 540, 1024, 1920);
-
     background: $color-beige-200;
 
     &__links {
         display: flex;
         flex-direction: row;
-
         margin: 0;
         padding: 0;
         gap: 1.25em;
-
         list-style: none;
     }
 
@@ -29,7 +24,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-
         gap: 0.5em;
 
         &:after {
@@ -41,9 +35,7 @@
 @media (max-width: 1023px) {
     .footer {
         flex-direction: column;
-
         height: 98px;
-
         gap: 7px;
 
         &__links {

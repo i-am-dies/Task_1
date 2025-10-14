@@ -2,10 +2,8 @@
 
 .cards {
     display: grid;
-
     margin: 0;
     padding: 0;
-
     list-style: none;
 
     & > li {
@@ -23,16 +21,13 @@
 
     &_review {
         grid-template-columns: repeat(2, 1fr);
-
         width: 100%;
-
         margin: 70px 0 0 0;
         padding: 0;
     }
 
     &_story {
         grid-template-columns: 1fr;
-
         gap: 50px;
     }
 }

@@ -5,11 +5,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-self: stretch;
-
     padding: fluid(60, 70, 1024, 1920);
     column-gap: fluid(20, 30, 1024, 1920);
     row-gap: 33px;
-
     background-color: $color-white;
     border-radius: 50px;
 
@@ -18,7 +16,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: left;
-
         gap: 30px;
     }
 
@@ -28,20 +25,15 @@
 
     &__button {
         box-sizing: border-box;
-
         padding: 15px 30px;
-
         background-color: $color-green-400;
         border-radius: 10px;
-
         color: $color-white;
-
         transition: background-color 300ms ease;
     }
 
     &__button_secondary {
         background-color: $color-green-100;
-
         color: $color-green-400;
     }
 
@@ -73,12 +65,10 @@
 @media (max-width: 1023px) {
     .form {
         grid-template-columns: 1fr;
-
         margin-top: -10px;
         padding: fluid(20, 60, 360, 1024);
         padding-bottom: fluid(40, 60, 360, 1024);
         gap: fluid(30, 33, 360, 1024);
-
         border-radius: fluid(30, 50, 360, 1024);
 
         &__row_wide {
@@ -87,7 +77,6 @@
 
         &__button {
             width: 100%;
-
             padding: 12px 20px;
         }
     }

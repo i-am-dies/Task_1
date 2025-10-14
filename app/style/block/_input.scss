@@ -3,15 +3,11 @@
 .input {
     height: 68px;
     box-sizing: border-box;
-
     padding: 20px 18px;
-
     background-color: $color-beige-100;
     border: solid 1px $color-beige-200;
     border-radius: 10px;
-
     font-family: inherit;
-
     transition: 300ms ease;
     transition-property: border-color, background-color;
 
@@ -27,15 +23,11 @@
 
     &_select {
         position: relative;
-
         padding: 14px 20px;
-
         background-image: url(../public/icon/dropdown.svg);
         background-repeat: no-repeat;
         background-position: right 19px center;
-
         appearance: none;
-
         cursor: pointer;
 
         &:invalid {
@@ -56,7 +48,6 @@
 
         font-family: inherit;
         letter-spacing: -0.025em;
-
         cursor: text;
     }
 
@@ -82,50 +73,38 @@
     &_radio,
     &_checkbox {
         flex-shrink: 0;
-
         position: relative;
-
         width: 26px;
         height: 26px;
-
         padding: 0;
-
         appearance: none;
-
         cursor: pointer;
     }
 
     &_radio {
         margin: 0;
-
         border-radius: 100%;
     }
 
     &_checkbox {
         margin: 0 8px 0 0;
-
         border-radius: 5px;
     }
 
     &_radio:after,
     &_checkbox:after {
         content: '';
-
         position: absolute;
-
         transition: transform 300ms ease;
     }
 
     &_radio:after {
         top: 50%;
         left: 50%;
-
         width: 55%;
         height: 55%;
-
         background-color: $color-black;
         border-radius: 100%;
-
         transform: translate(-50%, -50%) scale(0);
     }
 
@@ -136,13 +115,10 @@
     &_checkbox:after {
         top: 50%;
         left: 50%;
-
         width: 10.24px;
         height: 5.12px;
-
         border: solid $color-black;
         border-width: 0 0 2px 2px;
-
         transform: translate(-50%, -50%) rotate(-45deg) scale(0);
     }
 
@@ -173,14 +149,11 @@
 @media (max-width: 1023px) {
     .input {
         height: 43px;
-
         padding: 9px;
 
         &_select {
             height: 46px;
-
             padding: 9px;
-
             background-position: right 9px center;
         }
 

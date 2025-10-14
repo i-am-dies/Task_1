@@ -1,9 +1,7 @@
 .label {
     display: flex;
     flex-direction: column;
-
     gap: 8px 11px;
-
     text-align: left;
 
     &:has(.input_radio),

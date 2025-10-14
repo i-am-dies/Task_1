@@ -14,25 +14,19 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-
     height: 88px;
-
     color: $color-white;
 
     &_fixed {
         position: fixed;
         z-index: 1;
-
         background: rgba($color-beige-201, 0.6);
         backdrop-filter: blur(54px);
-
         color: $color-black;
-
         animation: HeaderAppearing 300ms ease;
     }
 
@@ -41,15 +35,12 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-
         width: fluid(910, 1170, 1024, 1920);
     }
 
     &__logo-icon {
         display: block;
-
         max-width: 182px;
-
         transition: max-width 300ms ease;
     }
 
@@ -61,11 +52,8 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-
         overflow: hidden;
-
         gap: fluid(31, 50, 1024, 1920);
-
         opacity: 1;
         visibility: visible;
         transition: 300ms ease;
