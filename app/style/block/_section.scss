@@ -46,52 +46,12 @@
     width: fluid(984, 1860, 1024, 1920);
 }
 
-@media (max-width: 1023px) {
-    .section {
-        gap: 50px;
-    }
-
-    .section_small {
-        width: auto;
-    }
-
-    .section_normal {
-        width: fluid(318, 918, 360, 1024);
-    }
-
-    .section_big {
-        width: fluid(318, 984, 360, 1024);
-    }
-}
-
 .section__title {
     max-width: 7.5em;
 }
 
 .section__description {
     max-width: 30em;
-}
-
-@media (max-width: 1919px) {
-    .section_welcome {
-        height: 743px;
-    }
-
-    .section__description {
-        max-width: 20em;
-    }
-}
-
-@media (max-width: 1023px) {
-    .section_welcome {
-        height: 400px;
-
-        gap: 40px;
-    }
-
-    .section__description {
-        max-width: 17.5em;
-    }
 }
 
 .section__button {
@@ -104,14 +64,6 @@
 
     transition: 300ms ease;
     transition-property: background-color, color;
-}
-
-@media (min-width: 1024px) {
-    .section__button:hover {
-        background: $color-orange-200;
-
-        color: $color-white
-    }
 }
 
 .section__button:active {
@@ -136,7 +88,59 @@
     text-align: left;
 }
 
+.section-header__title {
+    max-width: 15em;
+}
+
+.section-header__description {
+    max-width: 20em;
+}
+
+@media (max-width: 1919px) {
+    .section_welcome {
+        height: 743px;
+    }
+
+    .section__description {
+        max-width: 20em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section__button:hover {
+        background: $color-orange-200;
+
+        color: $color-white
+    }
+}
+
 @media (max-width: 1023px) {
+    .section {
+        gap: 50px;
+    }
+
+    .section_small {
+        width: auto;
+    }
+
+    .section_normal {
+        width: fluid(318, 918, 360, 1024);
+    }
+
+    .section_big {
+        width: fluid(318, 984, 360, 1024);
+    }
+
+    .section_welcome {
+        height: 400px;
+
+        gap: 40px;
+    }
+
+    .section__description {
+        max-width: 17.5em;
+    }
+
     .section-header {
         gap: 20px;
     }
@@ -146,12 +150,4 @@
 
         text-align: center;
     }
-}
-
-.section-header__title {
-    max-width: 15em;
-}
-
-.section-header__description {
-    max-width: 20em;
 }
