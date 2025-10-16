@@ -6,10 +6,6 @@
     margin: 0;
     list-style: none;
 
-    & > li {
-        min-width: 0;
-    }
-
     &_tour,
     &_review {
         gap: fluid(18, 30, 1024, 1920);
@@ -27,7 +23,7 @@
     }
 
     &_story {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 50px;
     }
 }
