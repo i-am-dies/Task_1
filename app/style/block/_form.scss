@@ -66,9 +66,9 @@
     .form {
         grid-template-columns: 1fr;
         gap: fluid(30, 33, 360, 1024);
-        margin-top: -10px;
         padding: fluid(20, 60, 360, 1024);
         padding-bottom: fluid(40, 60, 360, 1024);
+        margin-top: -10px;
         border-radius: fluid(30, 50, 360, 1024);
 
         &__row_wide {
