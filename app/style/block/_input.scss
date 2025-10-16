@@ -1,13 +1,13 @@
 @use '../color' as *;
 
 .input {
-    height: 68px;
     box-sizing: border-box;
+    height: 68px;
     padding: 20px 18px;
+    font-family: inherit;
     background-color: $color-beige-100;
     border: solid 1px $color-beige-200;
     border-radius: 10px;
-    font-family: inherit;
     transition: 300ms ease;
     transition-property: border-color, background-color;
 
@@ -16,19 +16,19 @@
     }
 
     &:focus {
-        background-color: $color-beige-200;
         outline: 0;
+        background-color: $color-beige-200;
         border-color: $color-gray-300;
     }
 
     &_select {
         position: relative;
         padding: 14px 20px;
+        appearance: none;
+        cursor: pointer;
         background-image: url(../public/icon/dropdown.svg);
         background-repeat: no-repeat;
         background-position: right 19px center;
-        appearance: none;
-        cursor: pointer;
 
         &:invalid {
             color: $color-gray-300;
@@ -44,9 +44,8 @@
     }
 
     &_date {
-        text-transform: uppercase;
-
         font-family: inherit;
+        text-transform: uppercase;
         letter-spacing: -0.025em;
         cursor: text;
     }
@@ -58,7 +57,6 @@
     &_textarea {
         height: auto;
         min-height: 152px;
-
         resize: vertical;
     }
 
@@ -72,8 +70,8 @@
 
     &_radio,
     &_checkbox {
-        flex-shrink: 0;
         position: relative;
+        flex-shrink: 0;
         width: 26px;
         height: 26px;
         padding: 0;
@@ -93,8 +91,8 @@
 
     &_radio:after,
     &_checkbox:after {
-        content: '';
         position: absolute;
+        content: '';
         transition: transform 300ms ease;
     }
 

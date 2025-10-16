@@ -2,10 +2,10 @@
 @use '../function' as *;
 
 .card {
-    display: flex;
-    flex-direction: column;
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     border-radius: 50px;
     transition: gap 300ms ease;
@@ -16,9 +16,9 @@
     }
 
     &_tour {
+        gap: 16px;
         height: 531px;
         padding: 50px;
-        gap: 16px;
     }
 
     &_review {
@@ -27,9 +27,9 @@
     }
 
     &_story {
+        gap: 37px;
         height: 567px;
         padding: 60px;
-        gap: 37px;
     }
 
     &__photo,
@@ -40,7 +40,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-
         object-fit: cover;
     }
 
@@ -73,8 +72,8 @@
         display: flex;
         flex-grow: 1;
         flex-direction: column;
-        align-items: flex-start;
         gap: 1.75em;
+        align-items: flex-start;
         text-align: left;
     }
 
@@ -84,13 +83,13 @@
 
     &__author {
         display: grid;
-        grid-template-columns: 1fr min-content;
-        grid-template-rows: 1fr min-content;
         grid-template-areas: "a avatar"
                              "b avatar";
+        grid-template-rows: 1fr min-content;
+        grid-template-columns: 1fr min-content;
+        gap: 8px;
         align-items: end;
         margin-top: 70px;
-        gap: 8px;
         text-align: left;
     }
 
@@ -106,8 +105,8 @@
     }
 
     &__list-item:before {
-        content: '•';
         padding-right: 0.55em;
+        content: '•';
     }
 
     &__footer {
@@ -119,14 +118,14 @@
     &__button {
         display: flex;
         flex-direction: row;
-        align-self: start;
+        gap: 1.2em;
         align-items: center;
+        align-self: start;
         margin: -7px -20px;
         padding: 7px 20px;
-        gap: 1.2em;
-        border-radius: 50px;
         color: inherit;
         text-decoration: none;
+        border-radius: 50px;
         transition: background-color 300ms ease;
     }
 
@@ -135,24 +134,24 @@
     }
 
     &__button:after {
-        content: '';
         position: absolute;
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
+        content: '';
     }
 
     &__footer-links {
         display: flex;
+        visibility: visible;
         flex-direction: row;
-        overflow: hidden;
+        gap: 1.8em;
         margin: 0;
         padding: 0;
-        gap: 1.8em;
+        overflow: hidden;
         list-style: none;
         opacity: 1;
-        visibility: visible;
         transition: 300ms ease;
         transition-property: opacity, visibility;
     }
@@ -188,9 +187,9 @@
         border-radius: fluid(20, 50, 360, 1024);
 
         &_tour {
+            gap: 13px;
             height: fluid(318, 455, 360, 1024);
             padding: fluid(25, 50, 360, 1024);
-            gap: 13px;
         }
 
         &_review {
@@ -198,9 +197,9 @@
         }
 
         &_story {
+            gap: 22px;
             height: 455px;
             padding: fluid(30, 60, 360, 1024);
-            gap: 22px;
         }
 
         &_tour &__header {
@@ -238,8 +237,8 @@
         }
 
         &__footer-links {
-            opacity: 0;
             visibility: hidden;
+            opacity: 0;
         }
     }
 }

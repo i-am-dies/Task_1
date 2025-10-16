@@ -24,8 +24,8 @@
     }
 
     .photos__row {
-        height: fluid(110, 301, 360, 1024);
         gap: fluid(10, 20, 360, 1024);
+        height: fluid(110, 301, 360, 1024);
     }
 
     .photo {

@@ -4,27 +4,27 @@
 .footer {
     display: flex;
     flex-direction: row;
+    gap: fluid(290, 540, 1024, 1920);
     align-items: center;
     justify-content: center;
     height: 88px;
     overflow: hidden;
-    gap: fluid(290, 540, 1024, 1920);
     background: $color-beige-200;
 
     &__links {
         display: flex;
         flex-direction: row;
+        gap: 1.25em;
         margin: 0;
         padding: 0;
-        gap: 1.25em;
         list-style: none;
     }
 
     &__link {
         display: flex;
         flex-direction: row;
-        align-items: center;
         gap: 0.5em;
+        align-items: center;
 
         &:after {
             left: calc(26px + 0.5em);
@@ -35,8 +35,8 @@
 @media (max-width: 1023px) {
     .footer {
         flex-direction: column;
-        height: 98px;
         gap: 7px;
+        height: 98px;
 
         &__links {
             gap: 1em;
@@ -62,8 +62,8 @@
             }
 
             &:after {
-                left: calc(24px + 0.25em);
                 right: 5px;
+                left: calc(24px + 0.25em);
             }
         }
     }

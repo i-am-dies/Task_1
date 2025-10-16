@@ -2,12 +2,12 @@
 
 .tabs {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 31px;
     justify-content: center;
     margin: 5px 0 6px 0;
     padding: 0;
-    gap: 31px;
     list-style: none;
 
     &__tab {
@@ -20,15 +20,15 @@
     }
 
     &__tab:after {
-        content: '';
-        display: block;
         position: absolute;
-        left: 0;
         right: 0;
         bottom: -6px;
+        left: 0;
+        display: block;
+        content: '';
         border-top: 2px solid;
-        transition: transform 300ms ease;
         transform: scaleX(0);
+        transition: transform 300ms ease;
     }
 
     &__tab:hover:after,
@@ -39,8 +39,8 @@
 
 @media (max-width: 1023px) {
     .tabs {
-        margin: 10px 0 0 0;
         gap: 10px;
+        margin: 10px 0 0 0;
 
         &__tab:after {
             bottom: 1px;
